@@ -15,5 +15,16 @@
             <artifactId>jooq</artifactId>
             <version>3.3.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.carmanconsulting.orm</groupId>
+            <artifactId>model</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.carmanconsulting.orm</groupId>
+            <artifactId>test-framework</artifactId>
+            <version>${project.version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 </project>
