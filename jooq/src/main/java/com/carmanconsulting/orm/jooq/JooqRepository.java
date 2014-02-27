@@ -39,12 +39,12 @@ public class JooqRepository implements Repository {
 
     @Override
     public void delete(Person person) {
-        dsl().delete(PERSON).where("id=?", person.getId()).execute();
+        dsl().delete(PERSON).where(ID.equal(person.getId())).execute();
     }
 
     @Override
     public Person find(String id) {
-        final Record record = dsl().select().from(PERSON).where("id=?", id).fetchOne();
+        final Record record = dsl().select().from(PERSON).where(ID.equal(id)).fetchOne();
         return map(record);
     }
 
